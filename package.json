@@ -1,0 +1,23 @@
+{
+  "name": "bluebank",
+  "version": "1.0.0",
+  "description": "IBM Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cod3rkane/bluebank.git"
+  },
+  "author": "cod3r kane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cod3rkane/bluebank/issues"
+  },
+  "homepage": "https://github.com/cod3rkane/bluebank#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "mongoose": "^4.8.2"
+  }
+}
