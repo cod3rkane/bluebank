@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
     styleUrls: ['./account-input.component.css']
 })
 export class AccountInputComponent {
+    @Input()
+    invalid: boolean;
+
     @Output()
     formValues: EventEmitter<FormGroup> = new EventEmitter();
 

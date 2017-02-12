@@ -9,5 +9,6 @@ var AccountScheme = new mongo.Schema({
 });
 
 var Account = mongo.model('contas', AccountScheme);
+// Account.create({cpf: '44688309805', agencia: '4321', conta: '001234567'});
 
 module.exports = Account;

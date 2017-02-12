@@ -1,20 +1,31 @@
 <app-navbar></app-navbar>
 <div class="content">
-  <div class="text-center">
-    <h4>Transferência</h4>
+  <div id="ring" [class.invisible]="!showRing">
+    <img class="loading" src="assets/ring.svg" alt="Ring Loading">
+    <section class="col-xs-12 col-md-6 btn-cancel-ring">
+      <button type="button" (click)="onCancelTransfer($event)" class="btn btn-primary waves-effect btn-block mt-2">Cancelar</button>
+    </section>
   </div>
-  <section class="account-sender">
-    <app-account-input (formValues)="onFormValuesSender($event)">
-      <div class="md-form">
-        <input placeholder="e.g 120,00" type="text" id="value" class="form-control validate">
-        <label for="value" data-error="wrong">Conta</label>
-      </div>
-    </app-account-input>
-  </section>
-  <section> 
-    <app-account-input (formValues)="onFormValuesReceiver($event)"></app-account-input>
-  </section>
-  <section class="col-xs-12 col-md-6">
-    <button #btnSend type="button" (click)="onSendForm($event)" disabled class="btn btn-primary waves-effect btn-block mt-2">Efetuar Transferência</button>
+  <section [class.invisible]="!showTransferSec">
+    <div class="text-center">
+      <h4>Transferência</h4>
+    </div>
+    <section class="account-sender">
+      <app-account-input (formValues)="onFormValuesSender($event)" [invalid]="senderInvalid">
+        <div class="md-form" [formGroup]="valueFormGroup">
+          <input placeholder="e.g 120,00" type="text" id="value" class="form-control validate" formControlName="value">
+          <label for="value" data-error="wrong">Conta</label>
+        </div>
+      </app-account-input>
+    </section>
+    <section> 
+      <app-account-input (formValues)="onFormValuesReceiver($event)" [invalid]="receiverInvalid"></app-account-input>
+    </section>
+    <div *ngIf="showInfo" class="text-center">
+      <h2>{{infoMsg}}</h2>
+    </div>
+    <section class="col-xs-12 col-md-6">
+      <button #btnSend type="button" (click)="onSendForm($event)" disabled class="btn btn-primary waves-effect btn-block mt-2">Efetuar Transferência</button>
+    </section>
   </section>
 </div>
