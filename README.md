@@ -29,3 +29,19 @@ O banco de dados deve ser populado com algumas contas.
 1. Aplicar conceitos de SOLID
 2. Testes unitários
 3. Utilizar bibliotecas de frontend (JQuery, Bootstrap, Angular, ModuleJS, etc)
+
+## Requisitos
+MongoDB
+
+
+## Instalação
+1. Instalar os modules do api.
+    1.1 na pasta raiz rode o comando: npm install.
+    
+2. Instalar os modules do cliente.
+    2.1 na pasta bluebank, rode o comando: npm install.
+
+## Subindo a aplicação e a API.
+1. Dentro da pasta api, rode o comando: node api.js.
+2. Na pasta bluebank, rode o comando: ng serve.
+3. Abra localhost:4200 em seu navegador favorito(IE >= 10, Chrome/Cromium, Firefox supports.). 
