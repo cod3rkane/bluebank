@@ -85,7 +85,6 @@ export class AppComponent {
 
         this.transferService.getAccountHolder(senderHolder).then(
             response => {
-                console.log(response);
                 let res = response.json();
                 if (res === null) {
                     this.senderInvalid = true;
