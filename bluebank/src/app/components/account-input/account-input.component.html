@@ -1,10 +1,11 @@
-<div class="account-input">
+<div class="account-input" [formGroup]="form">
   <div class="md-form">
-    <input placeholder="e.g 1234" type="text" id="form5" class="form-control">
-    <label for="form5">Agência</label>
+    <input placeholder="e.g 1234" type="number" id="agency" class="form-control validate" (keyup)="onPressKey()" formControlName="agency">
+    <label for="agency" data-error="wrong">Agência</label>
   </div>
   <div class="md-form">
-    <input placeholder="e.g 01234568-9" type="text" id="form5" class="form-control">
-    <label for="form5">Conta</label>
+    <input placeholder="e.g 01234568-9" type="number" id="account" class="form-control validate" (keyup)="onPressKey()" formControlName="account">
+    <label for="account" data-error="wrong">Conta</label>
   </div>
+  <ng-content></ng-content>
 </div>

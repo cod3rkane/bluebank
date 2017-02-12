@@ -1,4 +1,20 @@
 <app-navbar></app-navbar>
 <div class="content">
-  <app-account-input></app-account-input>
+  <div class="text-center">
+    <h4>Transferência</h4>
+  </div>
+  <section class="account-sender">
+    <app-account-input (formValues)="onFormValuesSender($event)">
+      <div class="md-form">
+        <input placeholder="e.g 120,00" type="text" id="value" class="form-control validate">
+        <label for="value" data-error="wrong">Conta</label>
+      </div>
+    </app-account-input>
+  </section>
+  <section> 
+    <app-account-input (formValues)="onFormValuesReceiver($event)"></app-account-input>
+  </section>
+  <section class="col-xs-12 col-md-6">
+    <button type="button" class="btn btn-primary waves-effect btn-block">Efetuar Transferência</button>
+  </section>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+    private senderFormGroup: FormGroup;
+    private receiverFormGroup: FormGroup;
+
+    onFormValuesSender(formData: FormGroup) {
+        console.log('sender');
+        console.log(formData);
+    }
+
+    onFormValuesReceiver(formData: FormGroup) {
+        console.log('receiver');
+        console.log(formData);
+    }
 }
