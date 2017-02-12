@@ -15,6 +15,6 @@
     <app-account-input (formValues)="onFormValuesReceiver($event)"></app-account-input>
   </section>
   <section class="col-xs-12 col-md-6">
-    <button type="button" class="btn btn-primary waves-effect btn-block">Efetuar Transferência</button>
+    <button #btnSend type="button" (click)="onSendForm($event)" disabled class="btn btn-primary waves-effect btn-block mt-2">Efetuar Transferência</button>
   </section>
 </div>

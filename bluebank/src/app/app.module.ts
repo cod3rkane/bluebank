@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AccountInputComponent } from './components/account-input/account-input.component';
 
+import { TransferService } from './services/transfer.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,7 @@ import { AccountInputComponent } from './components/account-input/account-input.
     HttpModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [TransferService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
