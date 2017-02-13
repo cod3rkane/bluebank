@@ -16,12 +16,12 @@ export class TransferService {
 
     getAccountHolder(accountHolder: AccountHolder) {
         let formData = JSON.stringify({ag: accountHolder.agency, cc: accountHolder.account});
-        return this.http.post('http://192.168.0.10:8080/accounts/holder', formData,{headers: this.defaultHeader}).toPromise();
+        return this.http.post('http://localhost:8080/accounts/holder', formData,{headers: this.defaultHeader}).toPromise();
     }
 
     getWallet(account: AccountModel) {
         let formData = JSON.stringify({id: account.id});
-        return this.http.post('http://192.168.0.10:8080/accounts/wallet', formData,{headers: this.defaultHeader}).toPromise();
+        return this.http.post('http://localhost:8080/accounts/wallet', formData,{headers: this.defaultHeader}).toPromise();
     }
 
     sendTransfer(sender: AccountModel, receiver: AccountModel, value: number) {
@@ -30,6 +30,6 @@ export class TransferService {
             "walletIdReceiver": receiver.wallet.idConta,
             "value": value
         });
-        return this.http.post('http://192.168.0.10:8080/wallet/transfer', formData,{headers: this.defaultHeader}).toPromise();
+        return this.http.post('http://localhost:8080/wallet/transfer', formData,{headers: this.defaultHeader}).toPromise();
     }
 }
