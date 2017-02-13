@@ -33,6 +33,9 @@ O banco de dados deve ser populado com algumas contas.
 ## Requisitos
 MongoDB
 
+## Criando o Banco
+1. Dentro na raiz do app, dentro da pasta tables, rode o build.sh para que ele crie o banco e algumas contas para teste.
+
 
 ## Instalação
 1. Instalar os modules do api.
