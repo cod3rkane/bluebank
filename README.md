@@ -34,7 +34,7 @@ O banco de dados deve ser populado com algumas contas.
 MongoDB
 
 ## Criando o Banco
-1. Dentro na raiz do app, dentro da pasta tables, rode o build.sh para que ele crie o banco e algumas contas para teste.
+1. Na raiz do app, dentro da pasta tables, rode o build.sh para que ele crie o banco e algumas contas para teste.
 
 
 ## Instalação
