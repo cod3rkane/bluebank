@@ -33,6 +33,10 @@ O banco de dados deve ser populado com algumas contas.
 ## Requisitos
 MongoDB
 
+## Plus - (Fedora Users) Instalando o MongoDB
+1. sudo dnf install mongodb-3.2.8-2.fc25.x86_64
+2. sudo dnf install mongodb-server-3.2.8-2.fc25.x86_64
+
 ## Criando o Banco
 1. Na raiz do app, dentro da pasta tables, rode o build.sh para que ele crie o banco e algumas contas para teste.
 
